@@ -21,6 +21,7 @@
 		F47EF13627D2753600132867 /* WelcomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13527D2753600132867 /* WelcomeScreenVC.swift */; };
 		F47EF13827D275CA00132867 /* LoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13727D275CA00132867 /* LoginScreenVC.swift */; };
 		F47EF13A27D276CC00132867 /* SignupScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13927D276CC00132867 /* SignupScreenVC.swift */; };
+		F47EF13D27D2C7BB00132867 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13C27D2C7BB00132867 /* MainScreenVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F47EF13527D2753600132867 /* WelcomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenVC.swift; sourceTree = "<group>"; };
 		F47EF13727D275CA00132867 /* LoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenVC.swift; sourceTree = "<group>"; };
 		F47EF13927D276CC00132867 /* SignupScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreenVC.swift; sourceTree = "<group>"; };
+		F47EF13C27D2C7BB00132867 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +113,8 @@
 			children = (
 				F47EF0FE27D2505E00132867 /* AppDelegate.swift */,
 				F47EF10027D2505E00132867 /* SceneDelegate.swift */,
-				F47EF13527D2753600132867 /* WelcomeScreenVC.swift */,
-				F47EF13727D275CA00132867 /* LoginScreenVC.swift */,
-				F47EF13927D276CC00132867 /* SignupScreenVC.swift */,
+				F47EF13C27D2C7BB00132867 /* MainScreenVC.swift */,
+				F47EF13B27D2C77B00132867 /* Authentification */,
 				F47EF10427D2505E00132867 /* Main.storyboard */,
 				F47EF10727D2505F00132867 /* Assets.xcassets */,
 				F47EF10927D2505F00132867 /* LaunchScreen.storyboard */,
@@ -138,6 +139,16 @@
 				F47EF12127D2505F00132867 /* StorytellerUITestsLaunchTests.swift */,
 			);
 			path = StorytellerUITests;
+			sourceTree = "<group>";
+		};
+		F47EF13B27D2C77B00132867 /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				F47EF13527D2753600132867 /* WelcomeScreenVC.swift */,
+				F47EF13727D275CA00132867 /* LoginScreenVC.swift */,
+				F47EF13927D276CC00132867 /* SignupScreenVC.swift */,
+			);
+			path = Authentification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				F47EF13827D275CA00132867 /* LoginScreenVC.swift in Sources */,
 				F47EF13627D2753600132867 /* WelcomeScreenVC.swift in Sources */,
 				F47EF0FF27D2505E00132867 /* AppDelegate.swift in Sources */,
+				F47EF13D27D2C7BB00132867 /* MainScreenVC.swift in Sources */,
 				F47EF13A27D276CC00132867 /* SignupScreenVC.swift in Sources */,
 				F47EF10127D2505E00132867 /* SceneDelegate.swift in Sources */,
 			);

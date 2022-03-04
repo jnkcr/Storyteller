@@ -33,7 +33,7 @@ class LoginScreenVC: UIViewController {
         // Email validation
         // ----- some code here ----
         // Password validation
-        guard password.count > 6 else {
+        guard password.count > 5 else {
             invalidLoginLabel.text = "Password: at least 6 characters"
             invalidLoginLabel.alpha = 1
             return
@@ -47,6 +47,7 @@ class LoginScreenVC: UIViewController {
                 return
             }
             print("User: \(result!.user.email!) (\(result!.user.uid))")
+            self?.navigationController?.popViewController(animated: false)
         }
     }
     

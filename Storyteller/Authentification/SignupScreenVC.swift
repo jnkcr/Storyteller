@@ -35,7 +35,7 @@ class SignupScreenVC: UIViewController {
         // Email validation
         // ----- some code here ----
         // Password validation
-        guard password01.count > 6 else {
+        guard password01.count > 5 else {
             invalidLabel.alpha = 1
             return
         }
@@ -46,10 +46,13 @@ class SignupScreenVC: UIViewController {
         // Create user
         Auth.auth().createUser(withEmail: email, password: password01) { [weak self] result, error in
             guard let sSelf = self else { return }
+            // Display warning when error
             guard error == nil else {
                 sSelf.invalidLabel.alpha = 1
                 return
             }
+            //
+            self?.navigationController?.popViewController(animated: false)
         }
     }
     

@@ -86,7 +86,10 @@
                             <constraint firstItem="rYL-Ws-nnl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yxE-Vo-Zsv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZOl-Vv-4Yz"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ZOl-Vv-4Yz"/>
+                    <connections>
+                        <segue destination="oI1-Uc-h0j" kind="show" identifier="toMainScreen" id="ymg-9U-cgV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,7 +215,7 @@
                             <constraint firstItem="Ddd-Hk-KKj" firstAttribute="centerX" secondItem="U4j-IX-eYa" secondAttribute="centerX" id="uQf-cL-Svd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DEa-V9-YTr"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="DEa-V9-YTr"/>
                     <connections>
                         <outlet property="emailTextField" destination="mSL-SK-feQ" id="c6z-Ie-gn2"/>
                         <outlet property="invalidLabel" destination="axh-SV-ULv" id="ecT-6O-upv"/>
@@ -223,6 +226,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fa-r6-2WI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1028.985507246377" y="362.94642857142856"/>
+        </scene>
+        <!--Main ScreenVC-->
+        <scene sceneID="puZ-dT-X6S">
+            <objects>
+                <viewController id="oI1-Uc-h0j" customClass="MainScreenVC" customModule="Storyteller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jLY-dh-SIr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="U9v-nj-s4D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="P3a-vG-5mp">
+                        <barButtonItem key="rightBarButtonItem" title="Sign out" image="person.crop.circle.badge.minus" catalog="system" id="XQO-an-YVc">
+                            <color key="tintColor" systemColor="systemIndigoColor"/>
+                            <connections>
+                                <action selector="signoutAction:" destination="oI1-Uc-h0j" id="5EN-uU-p1p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MnS-1F-Xbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="62"/>
         </scene>
         <!--Login-->
         <scene sceneID="zmv-iV-uFR">
@@ -328,7 +355,7 @@
                             <constraint firstItem="FUz-bZ-lgu" firstAttribute="leading" secondItem="NU2-x5-3qz" secondAttribute="leading" constant="50" id="wzM-QH-KwG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iXx-jk-nnx"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="iXx-jk-nnx"/>
                     <connections>
                         <outlet property="emailTextField" destination="mtT-64-ryt" id="sCi-Gn-8ZS"/>
                         <outlet property="invalidLoginLabel" destination="Dkb-TS-Eq1" id="2i1-oB-5NW"/>
@@ -344,8 +371,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rLq-G3-r1d" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m8s-kt-icS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="m8s-kt-icS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" systemColor="systemIndigoColor"/>
                     </navigationBar>
@@ -360,6 +387,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.crop.circle.badge.minus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
