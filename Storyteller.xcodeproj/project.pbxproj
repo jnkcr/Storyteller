@@ -16,6 +16,9 @@
 		F47EF11627D2505F00132867 /* StorytellerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF11527D2505F00132867 /* StorytellerTests.swift */; };
 		F47EF12027D2505F00132867 /* StorytellerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF11F27D2505F00132867 /* StorytellerUITests.swift */; };
 		F47EF12227D2505F00132867 /* StorytellerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF12127D2505F00132867 /* StorytellerUITestsLaunchTests.swift */; };
+		F47EF12F27D2509B00132867 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F47EF12E27D2509B00132867 /* GoogleService-Info.plist */; };
+		F47EF13227D2519A00132867 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F47EF13127D2519A00132867 /* FirebaseAnalytics */; };
+		F47EF13427D2519A00132867 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F47EF13327D2519A00132867 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		F47EF11B27D2505F00132867 /* StorytellerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StorytellerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47EF11F27D2505F00132867 /* StorytellerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellerUITests.swift; sourceTree = "<group>"; };
 		F47EF12127D2505F00132867 /* StorytellerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F47EF12E27D2509B00132867 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47EF13227D2519A00132867 /* FirebaseAnalytics in Frameworks */,
+				F47EF13427D2519A00132867 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,7 @@
 				F47EF10727D2505F00132867 /* Assets.xcassets */,
 				F47EF10927D2505F00132867 /* LaunchScreen.storyboard */,
 				F47EF10C27D2505F00132867 /* Info.plist */,
+				F47EF12E27D2509B00132867 /* GoogleService-Info.plist */,
 			);
 			path = Storyteller;
 			sourceTree = "<group>";
@@ -143,6 +150,10 @@
 			dependencies = (
 			);
 			name = Storyteller;
+			packageProductDependencies = (
+				F47EF13127D2519A00132867 /* FirebaseAnalytics */,
+				F47EF13327D2519A00132867 /* FirebaseAuth */,
+			);
 			productName = Storyteller;
 			productReference = F47EF0FB27D2505E00132867 /* Storyteller.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = F47EF0F227D2505E00132867;
+			packageReferences = (
+				F47EF13027D2519A00132867 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F47EF0FC27D2505E00132867 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47EF10B27D2505F00132867 /* LaunchScreen.storyboard in Resources */,
+				F47EF12F27D2509B00132867 /* GoogleService-Info.plist in Resources */,
 				F47EF10827D2505F00132867 /* Assets.xcassets in Resources */,
 				F47EF10627D2505E00132867 /* Main.storyboard in Resources */,
 			);
@@ -604,6 +619,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F47EF13027D2519A00132867 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F47EF13127D2519A00132867 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F47EF13027D2519A00132867 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F47EF13327D2519A00132867 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F47EF13027D2519A00132867 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F47EF0F327D2505E00132867 /* Project object */;
 }

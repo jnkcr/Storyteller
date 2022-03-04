@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>125900064303-5h6ehdln336usdh7u4i6bf4msdm5jea7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.125900064303-5h6ehdln336usdh7u4i6bf4msdm5jea7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBq7B2txeqQKOXmV_mw9_Ra2SFtN6EDwDo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>125900064303</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jankucera.Storyteller</string>
+	<key>PROJECT_ID</key>
+	<string>storyboardtestproject</string>
+	<key>STORAGE_BUCKET</key>
+	<string>storyboardtestproject.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:125900064303:ios:00fe4ffb2baf9acd3c28da</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.jankucera.Storyteller</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
