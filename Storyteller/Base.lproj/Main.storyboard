@@ -42,7 +42,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                <buttonConfiguration key="configuration" style="filled" title="Log in">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
@@ -57,7 +57,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign-up"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
                                 <connections>
                                     <segue destination="WG6-GE-Les" kind="show" id="qbn-Tp-Gam"/>
                                 </connections>
@@ -92,7 +92,7 @@
             </objects>
             <point key="canvasLocation" x="-2139.130434782609" y="2.6785714285714284"/>
         </scene>
-        <!--Signup-->
+        <!--Signup ScreenVC-->
         <scene sceneID="ldN-vN-ebc">
             <objects>
                 <viewController id="WG6-GE-Les" customClass="SignupScreenVC" customModule="Storyteller" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,7 +102,7 @@
                         <viewLayoutGuide key="safeArea" id="1Gt-ou-cTJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Signup" id="DEa-V9-YTr"/>
+                    <navigationItem key="navigationItem" id="DEa-V9-YTr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fa-r6-2WI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,7 +118,7 @@
                         <viewLayoutGuide key="safeArea" id="NU2-x5-3qz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="iXx-jk-nnx"/>
+                    <navigationItem key="navigationItem" id="iXx-jk-nnx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fO-fv-RhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
