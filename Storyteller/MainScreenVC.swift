@@ -13,8 +13,12 @@ class MainScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Main screen"
-        let user = Auth.auth().currentUser
-        print(user?.email)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hides back button
+        navigationController?.navigationBar.topItem?.hidesBackButton = true
     }
     
     @IBAction func signoutAction(_ sender: Any) {

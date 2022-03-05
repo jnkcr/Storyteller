@@ -18,6 +18,9 @@ class SignupScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Sign up"
+        emailTextField.delegate = self
+        password01TextField.delegate = self
+        password02TextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +29,16 @@ class SignupScreenVC: UIViewController {
     }
     
     @IBAction func signupAction(_ sender: Any) {
+        createUser()
+    }
+    
+}
+
+// MARK: - Additional functionality
+
+private extension SignupScreenVC {
+    
+    func createUser() {
         // Hide invalid label (it might have been triggered before)
         invalidLabel.alpha = 0
         // Unwrap textfields
@@ -51,8 +64,26 @@ class SignupScreenVC: UIViewController {
                 sSelf.invalidLabel.alpha = 1
                 return
             }
-            //
+            // pop when all went well
             self?.navigationController?.popViewController(animated: false)
+        }
+    }
+    
+}
+
+// MARK: - Textfield delegate
+
+extension SignupScreenVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case emailTextField:
+            return password01TextField.becomeFirstResponder()
+        case password01TextField:
+            return password02TextField.becomeFirstResponder()
+        default:
+            createUser()
+            return textField.resignFirstResponder()
         }
     }
     

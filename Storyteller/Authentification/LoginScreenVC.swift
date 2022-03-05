@@ -17,6 +17,8 @@ class LoginScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Log in"
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,6 +27,16 @@ class LoginScreenVC: UIViewController {
     }
     
     @IBAction func loginAction(_ sender: Any) {
+        loginUser()
+    }
+    
+}
+
+// MARK: - Additional fuctionality
+
+private extension LoginScreenVC {
+    
+    func loginUser() {
         // Hide invalid label (it might have been triggered before)
         invalidLoginLabel.alpha = 0
         // Unwrap textfields
@@ -49,6 +61,23 @@ class LoginScreenVC: UIViewController {
             print("User: \(result!.user.email!) (\(result!.user.uid))")
             self?.navigationController?.popViewController(animated: false)
         }
+    }
+    
+}
+
+// MARK: - Textfield delegate
+
+extension LoginScreenVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case emailTextField:
+            return passwordTextField.becomeFirstResponder()
+        default:
+            loginUser()
+            return textField.resignFirstResponder()
+        }
+        
     }
     
 }
