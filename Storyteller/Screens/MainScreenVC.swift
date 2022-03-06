@@ -9,26 +9,25 @@ import UIKit
 import FirebaseAuth
 
 class MainScreenVC: UIViewController {
+    
+    private var user: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Main screen"
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if Auth.auth().currentUser == nil {
-            segueToWelcomeScreen()
+        // Add authentification listener
+        Auth.auth().addStateDidChangeListener { [weak self] authentication, user in
+            if user != nil {
+                self?.user = user
+            } else {
+                self?.segueToWelcomeScreen()
+            }
         }
     }
     
-    @IBAction func signoutAction(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            segueToWelcomeScreen()
-        } catch {
-            print(error.localizedDescription)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? UserProfileVC {
+            dest.user = user
         }
     }
     

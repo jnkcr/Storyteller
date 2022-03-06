@@ -11,7 +11,7 @@
         <!--Welcome VC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Welcome VC" modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="WelcomeScreenVC" customModule="Storyteller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Welcome VC" id="BYZ-38-t0r" customClass="WelcomeScreenVC" customModule="Storyteller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,10 +235,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="P3a-vG-5mp">
-                        <barButtonItem key="rightBarButtonItem" title="Sign out" image="person.crop.circle.badge.minus" catalog="system" id="XQO-an-YVc">
+                        <barButtonItem key="rightBarButtonItem" title="Sign out" image="person.circle.fill" catalog="system" id="XQO-an-YVc">
                             <color key="tintColor" systemColor="systemIndigoColor"/>
                             <connections>
-                                <action selector="signoutAction:" destination="oI1-Uc-h0j" id="5EN-uU-p1p"/>
+                                <segue destination="gdZ-eT-IOu" kind="show" identifier="toProfileScreen" id="h6k-ur-DtW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -259,25 +259,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-HN-486">
-                                <rect key="frame" x="50" y="782" width="314" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="QsB-Xd-0vv"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Sign out"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S9l-B4-YLj" userLabel="Buttons Stack">
+                                <rect key="frame" x="40" y="743" width="334" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-HN-486">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="QsB-Xd-0vv"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Sign out">
+                                            <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signoutButtonAction:" destination="gdZ-eT-IOu" eventType="touchUpInside" id="Jjt-lw-F7i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-e7-LKt">
+                                        <rect key="frame" x="172" y="0.0" width="162" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MQD-yr-G4a"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Delete"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IqY-GH-FN3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ovf-HN-486" firstAttribute="leading" secondItem="IqY-GH-FN3" secondAttribute="leading" constant="50" id="6e6-bu-a5Y"/>
-                            <constraint firstItem="IqY-GH-FN3" firstAttribute="bottom" secondItem="ovf-HN-486" secondAttribute="bottom" constant="30" id="KJx-wC-ugN"/>
-                            <constraint firstItem="IqY-GH-FN3" firstAttribute="trailing" secondItem="ovf-HN-486" secondAttribute="trailing" constant="50" id="v66-PI-O8d"/>
-                            <constraint firstItem="ovf-HN-486" firstAttribute="centerX" secondItem="wN8-ai-Uwa" secondAttribute="centerX" id="xOM-iH-1kT"/>
+                            <constraint firstItem="S9l-B4-YLj" firstAttribute="centerX" secondItem="wN8-ai-Uwa" secondAttribute="centerX" id="4Kf-ds-x2Q"/>
+                            <constraint firstItem="IqY-GH-FN3" firstAttribute="trailing" secondItem="S9l-B4-YLj" secondAttribute="trailing" constant="40" id="BKK-6V-Vpm"/>
+                            <constraint firstItem="IqY-GH-FN3" firstAttribute="bottom" secondItem="S9l-B4-YLj" secondAttribute="bottom" constant="20" id="CyL-1r-nr5"/>
+                            <constraint firstItem="S9l-B4-YLj" firstAttribute="leading" secondItem="IqY-GH-FN3" secondAttribute="leading" constant="40" id="T6A-4X-0fJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bdr-LH-Qwv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jkc-RE-7IK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -419,7 +439,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.crop.circle.badge.minus" catalog="system" width="128" height="113"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -428,6 +448,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
