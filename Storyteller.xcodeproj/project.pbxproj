@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F43A200327D50BA10050066A /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A200227D50BA10050066A /* UserProfileVC.swift */; };
 		F47EF0FF27D2505E00132867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF0FE27D2505E00132867 /* AppDelegate.swift */; };
 		F47EF10127D2505E00132867 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF10027D2505E00132867 /* SceneDelegate.swift */; };
 		F47EF10627D2505E00132867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47EF10427D2505E00132867 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F43A200227D50BA10050066A /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		F47EF0FB27D2505E00132867 /* Storyteller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storyteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47EF0FE27D2505E00132867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47EF10027D2505E00132867 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F43A200427D50BB20050066A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F47EF13C27D2C7BB00132867 /* MainScreenVC.swift */,
+				F43A200227D50BA10050066A /* UserProfileVC.swift */,
+				F47EF13B27D2C77B00132867 /* Authentification */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		F47EF0F227D2505E00132867 = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +125,7 @@
 			children = (
 				F47EF0FE27D2505E00132867 /* AppDelegate.swift */,
 				F47EF10027D2505E00132867 /* SceneDelegate.swift */,
-				F47EF13C27D2C7BB00132867 /* MainScreenVC.swift */,
-				F47EF13B27D2C77B00132867 /* Authentification */,
+				F43A200427D50BB20050066A /* Screens */,
 				F47EF10427D2505E00132867 /* Main.storyboard */,
 				F47EF10727D2505F00132867 /* Assets.xcassets */,
 				F47EF10927D2505F00132867 /* LaunchScreen.storyboard */,
@@ -292,6 +303,7 @@
 			files = (
 				F47EF13827D275CA00132867 /* LoginScreenVC.swift in Sources */,
 				F47EF13627D2753600132867 /* WelcomeScreenVC.swift in Sources */,
+				F43A200327D50BA10050066A /* UserProfileVC.swift in Sources */,
 				F47EF0FF27D2505E00132867 /* AppDelegate.swift in Sources */,
 				F47EF13D27D2C7BB00132867 /* MainScreenVC.swift in Sources */,
 				F47EF13A27D276CC00132867 /* SignupScreenVC.swift in Sources */,

@@ -58,8 +58,8 @@ private extension LoginScreenVC {
                 print(error?.localizedDescription ?? "Login error")
                 return
             }
-            print("User: \(result!.user.email!) (\(result!.user.uid))")
-            self?.navigationController?.popViewController(animated: false)
+            // Pop when all went well
+            self?.navigationController?.popToRootViewController(animated: true)
         }
     }
     

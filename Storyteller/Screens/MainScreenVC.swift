@@ -17,17 +17,27 @@ class MainScreenVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // Hides back button
-        navigationController?.navigationBar.topItem?.hidesBackButton = true
+        
+        if Auth.auth().currentUser == nil {
+            segueToWelcomeScreen()
+        }
     }
     
     @IBAction func signoutAction(_ sender: Any) {
         do {
             try Auth.auth().signOut()
-            navigationController?.popViewController(animated: true)
+            segueToWelcomeScreen()
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+}
+
+private extension MainScreenVC {
+    
+    func segueToWelcomeScreen() {
+        performSegue(withIdentifier: "toWelcomeScreen", sender: nil)
     }
     
 }

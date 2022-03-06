@@ -65,7 +65,7 @@ private extension SignupScreenVC {
                 return
             }
             // pop when all went well
-            self?.navigationController?.popViewController(animated: false)
+            self?.navigationController?.popToRootViewController(animated: true)
         }
     }
     

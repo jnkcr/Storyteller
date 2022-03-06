@@ -12,14 +12,7 @@ class WelcomeScreenVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if Auth.auth().currentUser != nil {
-            performSegue(withIdentifier: "toMainScreen", sender: nil)
-        }
+        navigationItem.hidesBackButton = true
     }
     
 }
