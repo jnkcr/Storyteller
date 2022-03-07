@@ -88,6 +88,11 @@ private extension UserProfileVC {
     }
     
     func saveChanges() {
+        // Check for changes
+        guard nameTextField.text != user?.displayName else {
+            disableEditing()
+            return
+        }
         // Start activity indicator
         activityIndicator.startAnimating()
         // Create request
