@@ -17,10 +17,14 @@ class SignupScreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // UI Config
         title = "Sign up"
+        // Textfield delagate
         emailTextField.delegate = self
         password01TextField.delegate = self
         password02TextField.delegate = self
+        // Gesture
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing)))
     }
     
     override func viewWillAppear(_ animated: Bool) {

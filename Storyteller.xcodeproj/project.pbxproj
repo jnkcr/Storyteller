@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F43A200327D50BA10050066A /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A200227D50BA10050066A /* UserProfileVC.swift */; };
+		F440F1B327D61EDD00A5080F /* ForgottenPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B227D61EDD00A5080F /* ForgottenPasswordVC.swift */; };
 		F47EF0FF27D2505E00132867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF0FE27D2505E00132867 /* AppDelegate.swift */; };
 		F47EF10127D2505E00132867 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF10027D2505E00132867 /* SceneDelegate.swift */; };
 		F47EF10627D2505E00132867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47EF10427D2505E00132867 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		F43A200227D50BA10050066A /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		F440F1B227D61EDD00A5080F /* ForgottenPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordVC.swift; sourceTree = "<group>"; };
 		F47EF0FB27D2505E00132867 /* Storyteller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storyteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47EF0FE27D2505E00132867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47EF10027D2505E00132867 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				F47EF13527D2753600132867 /* WelcomeScreenVC.swift */,
 				F47EF13727D275CA00132867 /* LoginScreenVC.swift */,
+				F440F1B227D61EDD00A5080F /* ForgottenPasswordVC.swift */,
 				F47EF13927D276CC00132867 /* SignupScreenVC.swift */,
 			);
 			path = Authentification;
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F440F1B327D61EDD00A5080F /* ForgottenPasswordVC.swift in Sources */,
 				F47EF13827D275CA00132867 /* LoginScreenVC.swift in Sources */,
 				F47EF13627D2753600132867 /* WelcomeScreenVC.swift in Sources */,
 				F43A200327D50BA10050066A /* UserProfileVC.swift in Sources */,

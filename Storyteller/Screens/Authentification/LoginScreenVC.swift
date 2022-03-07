@@ -16,9 +16,13 @@ class LoginScreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // UI Config
         title = "Log in"
+        // Textfield delegate
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        // Gesture
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing)))
     }
     
     override func viewWillAppear(_ animated: Bool) {
