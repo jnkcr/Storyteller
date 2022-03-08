@@ -23,7 +23,10 @@
 		F47EF13627D2753600132867 /* WelcomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13527D2753600132867 /* WelcomeScreenVC.swift */; };
 		F47EF13827D275CA00132867 /* LoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13727D275CA00132867 /* LoginScreenVC.swift */; };
 		F47EF13A27D276CC00132867 /* SignupScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13927D276CC00132867 /* SignupScreenVC.swift */; };
-		F47EF13D27D2C7BB00132867 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13C27D2C7BB00132867 /* MainScreenVC.swift */; };
+		F47EF13D27D2C7BB00132867 /* StoryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13C27D2C7BB00132867 /* StoryMainVC.swift */; };
+		F4CE1FDB27D7716A00B330E7 /* StoryMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDA27D7716A00B330E7 /* StoryMainTableCell.swift */; };
+		F4CE1FDD27D788BD00B330E7 /* RandomIconGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDC27D788BD00B330E7 /* RandomIconGenerator.swift */; };
+		F4CE1FE027D791BB00B330E7 /* StoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDF27D791BB00B330E7 /* StoryDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +65,10 @@
 		F47EF13527D2753600132867 /* WelcomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenVC.swift; sourceTree = "<group>"; };
 		F47EF13727D275CA00132867 /* LoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenVC.swift; sourceTree = "<group>"; };
 		F47EF13927D276CC00132867 /* SignupScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreenVC.swift; sourceTree = "<group>"; };
-		F47EF13C27D2C7BB00132867 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		F47EF13C27D2C7BB00132867 /* StoryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMainVC.swift; sourceTree = "<group>"; };
+		F4CE1FDA27D7716A00B330E7 /* StoryMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMainTableCell.swift; sourceTree = "<group>"; };
+		F4CE1FDC27D788BD00B330E7 /* RandomIconGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomIconGenerator.swift; sourceTree = "<group>"; };
+		F4CE1FDF27D791BB00B330E7 /* StoryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,10 @@
 		F43A200427D50BB20050066A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F47EF13C27D2C7BB00132867 /* MainScreenVC.swift */,
-				F43A200227D50BA10050066A /* UserProfileVC.swift */,
+				F47EF13C27D2C7BB00132867 /* StoryMainVC.swift */,
+				F4CE1FDA27D7716A00B330E7 /* StoryMainTableCell.swift */,
+				F4CE1FDF27D791BB00B330E7 /* StoryDetailVC.swift */,
+				F4CE1FDE27D7919400B330E7 /* Profile */,
 				F47EF13B27D2C77B00132867 /* Authentification */,
 			);
 			path = Screens;
@@ -127,6 +135,7 @@
 			children = (
 				F47EF0FE27D2505E00132867 /* AppDelegate.swift */,
 				F47EF10027D2505E00132867 /* SceneDelegate.swift */,
+				F4CE1FDC27D788BD00B330E7 /* RandomIconGenerator.swift */,
 				F43A200427D50BB20050066A /* Screens */,
 				F47EF10427D2505E00132867 /* Main.storyboard */,
 				F47EF10727D2505F00132867 /* Assets.xcassets */,
@@ -163,6 +172,14 @@
 				F47EF13927D276CC00132867 /* SignupScreenVC.swift */,
 			);
 			path = Authentification;
+			sourceTree = "<group>";
+		};
+		F4CE1FDE27D7919400B330E7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F43A200227D50BA10050066A /* UserProfileVC.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,10 +323,13 @@
 			files = (
 				F440F1B327D61EDD00A5080F /* ForgottenPasswordVC.swift in Sources */,
 				F47EF13827D275CA00132867 /* LoginScreenVC.swift in Sources */,
+				F4CE1FDB27D7716A00B330E7 /* StoryMainTableCell.swift in Sources */,
 				F47EF13627D2753600132867 /* WelcomeScreenVC.swift in Sources */,
+				F4CE1FE027D791BB00B330E7 /* StoryDetailVC.swift in Sources */,
 				F43A200327D50BA10050066A /* UserProfileVC.swift in Sources */,
+				F4CE1FDD27D788BD00B330E7 /* RandomIconGenerator.swift in Sources */,
 				F47EF0FF27D2505E00132867 /* AppDelegate.swift in Sources */,
-				F47EF13D27D2C7BB00132867 /* MainScreenVC.swift in Sources */,
+				F47EF13D27D2C7BB00132867 /* StoryMainVC.swift in Sources */,
 				F47EF13A27D276CC00132867 /* SignupScreenVC.swift in Sources */,
 				F47EF10127D2505E00132867 /* SceneDelegate.swift in Sources */,
 			);

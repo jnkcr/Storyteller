@@ -11,6 +11,7 @@ import FirebaseAuth
 class UserProfileVC: UIViewController {
     
     var user: User?
+    let userAuthentification = Auth.auth().currentUser
     var isEditingProfile: Bool = false
     
     @IBOutlet weak var profileImage: UIButton!
@@ -25,11 +26,7 @@ class UserProfileVC: UIViewController {
         title = "Profile"
         navigationItem.backButtonTitle = "Back"
         // Textfield config
-        profileImage.isEnabled = false
-        nameTextField.isEnabled = false
-        emailTextField.isEnabled = false
-        nameTextField.textColor = .secondaryLabel
-        emailTextField.textColor = .systemGray
+        disableEditing()
         // Textfield data
         nameTextField.text = user?.displayName
         emailTextField.text = user?.email
@@ -58,7 +55,14 @@ class UserProfileVC: UIViewController {
     }
     
     @IBAction func deleteAccountAction(_ sender: Any) {
-        
+        let sheet = UIAlertController(title: "Deleting account", message: "You are about to delete your account. You will not be able to log in to your account again and all of your data will be erased as well. Are you sure that you really want to proceed? Are you? Really?", preferredStyle: .actionSheet)
+        let confirmAction = UIAlertAction(title: "Delete account", style: .destructive) { _ in
+            self.deleteAccount()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        sheet.addAction(confirmAction)
+        sheet.addAction(cancelAction)
+        present(sheet, animated: true)
     }
     
     deinit {
@@ -83,12 +87,14 @@ private extension UserProfileVC {
         isEditingProfile = false
         profileImage.isEnabled = false
         nameTextField.isEnabled = false
+        emailTextField.isEnabled = false
         nameTextField.textColor = .secondaryLabel
+        emailTextField.textColor = .secondaryLabel
         editProfileButton.setTitle("Edit profile", for: .normal)
     }
     
     func saveChanges() {
-        // Check for changes
+        // Check for changes first
         guard nameTextField.text != user?.displayName else {
             disableEditing()
             return
@@ -96,7 +102,7 @@ private extension UserProfileVC {
         // Start activity indicator
         activityIndicator.startAnimating()
         // Create request
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        let changeRequest = userAuthentification?.createProfileChangeRequest()
         changeRequest?.displayName = nameTextField.text
         // Commit changes
         changeRequest?.commitChanges { [weak self] error in
@@ -112,6 +118,13 @@ private extension UserProfileVC {
             dismiss(animated: true)
         } catch {
             print(error.localizedDescription)
+        }
+    }
+    
+    func deleteAccount() {
+        userAuthentification?.delete { error in
+            guard error == nil else { return }
+            self.dismiss(animated: true)
         }
     }
     

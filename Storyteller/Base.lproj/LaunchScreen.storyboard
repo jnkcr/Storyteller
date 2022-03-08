@@ -31,6 +31,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="tintColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstItem="UNx-68-IHe" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0F5-C8-Rtz"/>
                             <constraint firstItem="D1j-rt-urh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6hK-5a-wrF"/>
