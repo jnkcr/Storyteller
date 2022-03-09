@@ -25,8 +25,11 @@
 		F47EF13A27D276CC00132867 /* SignupScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13927D276CC00132867 /* SignupScreenVC.swift */; };
 		F47EF13D27D2C7BB00132867 /* StoryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13C27D2C7BB00132867 /* StoryMainVC.swift */; };
 		F4CE1FDB27D7716A00B330E7 /* StoryMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDA27D7716A00B330E7 /* StoryMainTableCell.swift */; };
-		F4CE1FDD27D788BD00B330E7 /* RandomIconGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDC27D788BD00B330E7 /* RandomIconGenerator.swift */; };
+		F4CE1FDD27D788BD00B330E7 /* RandomStuffGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDC27D788BD00B330E7 /* RandomStuffGenerator.swift */; };
 		F4CE1FE027D791BB00B330E7 /* StoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDF27D791BB00B330E7 /* StoryDetailVC.swift */; };
+		F4CE1FE227D7B51600B330E7 /* StoryMainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FE127D7B51600B330E7 /* StoryMainVM.swift */; };
+		F4CE1FE527D7B5A100B330E7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F4CE1FE427D7B5A100B330E7 /* FirebaseFirestore */; };
+		F4CE1FED27D9060200B330E7 /* StoryDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FEC27D9060200B330E7 /* StoryDetailVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +70,10 @@
 		F47EF13927D276CC00132867 /* SignupScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreenVC.swift; sourceTree = "<group>"; };
 		F47EF13C27D2C7BB00132867 /* StoryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMainVC.swift; sourceTree = "<group>"; };
 		F4CE1FDA27D7716A00B330E7 /* StoryMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMainTableCell.swift; sourceTree = "<group>"; };
-		F4CE1FDC27D788BD00B330E7 /* RandomIconGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomIconGenerator.swift; sourceTree = "<group>"; };
+		F4CE1FDC27D788BD00B330E7 /* RandomStuffGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStuffGenerator.swift; sourceTree = "<group>"; };
 		F4CE1FDF27D791BB00B330E7 /* StoryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailVC.swift; sourceTree = "<group>"; };
+		F4CE1FE127D7B51600B330E7 /* StoryMainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMainVM.swift; sourceTree = "<group>"; };
+		F4CE1FEC27D9060200B330E7 /* StoryDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,7 @@
 			files = (
 				F47EF13227D2519A00132867 /* FirebaseAnalytics in Frameworks */,
 				F47EF13427D2519A00132867 /* FirebaseAuth in Frameworks */,
+				F4CE1FE527D7B5A100B330E7 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +109,9 @@
 			children = (
 				F47EF13C27D2C7BB00132867 /* StoryMainVC.swift */,
 				F4CE1FDA27D7716A00B330E7 /* StoryMainTableCell.swift */,
+				F4CE1FE127D7B51600B330E7 /* StoryMainVM.swift */,
 				F4CE1FDF27D791BB00B330E7 /* StoryDetailVC.swift */,
+				F4CE1FEC27D9060200B330E7 /* StoryDetailVM.swift */,
 				F4CE1FDE27D7919400B330E7 /* Profile */,
 				F47EF13B27D2C77B00132867 /* Authentification */,
 			);
@@ -117,6 +125,7 @@
 				F47EF11427D2505F00132867 /* StorytellerTests */,
 				F47EF11E27D2505F00132867 /* StorytellerUITests */,
 				F47EF0FC27D2505E00132867 /* Products */,
+				F4CE1FE327D7B5A100B330E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,8 +144,8 @@
 			children = (
 				F47EF0FE27D2505E00132867 /* AppDelegate.swift */,
 				F47EF10027D2505E00132867 /* SceneDelegate.swift */,
-				F4CE1FDC27D788BD00B330E7 /* RandomIconGenerator.swift */,
 				F43A200427D50BB20050066A /* Screens */,
+				F4CE1FEB27D8EAB700B330E7 /* Helpers */,
 				F47EF10427D2505E00132867 /* Main.storyboard */,
 				F47EF10727D2505F00132867 /* Assets.xcassets */,
 				F47EF10927D2505F00132867 /* LaunchScreen.storyboard */,
@@ -182,6 +191,21 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		F4CE1FE327D7B5A100B330E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4CE1FEB27D8EAB700B330E7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE1FDC27D788BD00B330E7 /* RandomStuffGenerator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,6 +225,7 @@
 			packageProductDependencies = (
 				F47EF13127D2519A00132867 /* FirebaseAnalytics */,
 				F47EF13327D2519A00132867 /* FirebaseAuth */,
+				F4CE1FE427D7B5A100B330E7 /* FirebaseFirestore */,
 			);
 			productName = Storyteller;
 			productReference = F47EF0FB27D2505E00132867 /* Storyteller.app */;
@@ -326,9 +351,11 @@
 				F4CE1FDB27D7716A00B330E7 /* StoryMainTableCell.swift in Sources */,
 				F47EF13627D2753600132867 /* WelcomeScreenVC.swift in Sources */,
 				F4CE1FE027D791BB00B330E7 /* StoryDetailVC.swift in Sources */,
+				F4CE1FE227D7B51600B330E7 /* StoryMainVM.swift in Sources */,
 				F43A200327D50BA10050066A /* UserProfileVC.swift in Sources */,
-				F4CE1FDD27D788BD00B330E7 /* RandomIconGenerator.swift in Sources */,
+				F4CE1FDD27D788BD00B330E7 /* RandomStuffGenerator.swift in Sources */,
 				F47EF0FF27D2505E00132867 /* AppDelegate.swift in Sources */,
+				F4CE1FED27D9060200B330E7 /* StoryDetailVM.swift in Sources */,
 				F47EF13D27D2C7BB00132867 /* StoryMainVC.swift in Sources */,
 				F47EF13A27D276CC00132867 /* SignupScreenVC.swift in Sources */,
 				F47EF10127D2505E00132867 /* SceneDelegate.swift in Sources */,
@@ -697,6 +724,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F47EF13027D2519A00132867 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		F4CE1FE427D7B5A100B330E7 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F47EF13027D2519A00132867 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

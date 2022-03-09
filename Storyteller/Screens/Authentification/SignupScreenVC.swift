@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class SignupScreenVC: UIViewController {
     
@@ -50,22 +51,30 @@ private extension SignupScreenVC {
         guard let password01 = password01TextField.text else { return }
         guard let password02 = password02TextField.text else { return }
         // Email validation
+        let emailPattern = #"^\S+@\S+\.\S+$"#
+        let result = email.range(of: emailPattern, options: .regularExpression)
+        guard result != nil else {
+            invalidLabel.text = "Invalid email format"
+            invalidLabel.alpha = 1
+            return
+        }
         // ----- some code here ----
         // Password validation
         guard password01.count > 5 else {
+            invalidLabel.text = "Password: at least 6 characters"
             invalidLabel.alpha = 1
             return
         }
         guard password01 == password02 else {
+            invalidLabel.text = "Password: given passwords are not same"
             invalidLabel.alpha = 1
             return
         }
         // Create user
         Auth.auth().createUser(withEmail: email, password: password01) { [weak self] result, error in
-            guard let sSelf = self else { return }
             // Display warning when error
             guard error == nil else {
-                sSelf.invalidLabel.alpha = 1
+                self?.invalidLabel.alpha = 1
                 return
             }
             // pop when all went well

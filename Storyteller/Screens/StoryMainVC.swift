@@ -10,11 +10,10 @@ import FirebaseAuth
 
 class StoryMainVC: UIViewController {
     
-    private var user: User?
-    private var index: Int?
-    @IBOutlet weak var tableView: UITableView!
+    private var nameAtIndex: String?
+    private let storyViewModel: StoryMainVM = StoryMainVM()
     
-    let tableData = [String](repeating: "Alena", count: 30)
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,20 +24,27 @@ class StoryMainVC: UIViewController {
         // Add authentification listener
         Auth.auth().addStateDidChangeListener { [weak self] authentication, user in
             if user != nil {
-                self?.user = user
+                self?.storyViewModel.authUser = user
             } else {
                 self?.segueToWelcomeScreen()
             }
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? UserProfileVC {
-            dest.user = user
+            dest.authUser = storyViewModel.authUser
         }
         if let dest = segue.destination as? StoryDetailVC {
-            guard let i = index else { return }
-            dest.name = tableData[i]
+            guard let n = nameAtIndex else { return }
+            dest.name = n
         }
     }
     
@@ -59,13 +65,13 @@ private extension StoryMainVC {
 extension StoryMainVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableData.count
+        30
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? StoryMainTableCell else { fatalError() }
-        cell.iconImage.image = UIImage(systemName: RandomIconGenerator.generateIcon())
-        cell.titleLabel.text = tableData[indexPath.row]
+        cell.iconImage.image = UIImage(systemName: RandomStuffGenerator.generateIcon())
+        cell.titleLabel.text = RandomStuffGenerator.generateName()
         return cell
     }
     
@@ -74,7 +80,8 @@ extension StoryMainVC: UITableViewDataSource {
 extension StoryMainVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        index = indexPath.row
+        guard let cell = tableView.cellForRow(at: indexPath) as? StoryMainTableCell else { return }
+        nameAtIndex = cell.titleLabel.text
         performSegue(withIdentifier: "toStoryDetail", sender: nil)
     }
     

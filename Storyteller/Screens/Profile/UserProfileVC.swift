@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class UserProfileVC: UIViewController {
     
-    var user: User?
+    var authUser: User?
     let userAuthentification = Auth.auth().currentUser
     var isEditingProfile: Bool = false
     
@@ -28,8 +28,8 @@ class UserProfileVC: UIViewController {
         // Textfield config
         disableEditing()
         // Textfield data
-        nameTextField.text = user?.displayName
-        emailTextField.text = user?.email
+        nameTextField.text = authUser?.displayName
+        emailTextField.text = authUser?.email
         // Textfield delegate
         nameTextField.delegate = self
         emailTextField.delegate = self
@@ -39,7 +39,6 @@ class UserProfileVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     @IBAction func editProfileAction(_ sender: Any) {
@@ -95,7 +94,7 @@ private extension UserProfileVC {
     
     func saveChanges() {
         // Check for changes first
-        guard nameTextField.text != user?.displayName else {
+        guard nameTextField.text != authUser?.displayName else {
             disableEditing()
             return
         }
