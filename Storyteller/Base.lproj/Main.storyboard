@@ -310,8 +310,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="hJD-0r-Kba">
-                                <rect key="frame" x="16" y="104" width="382" height="226"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="hJD-0r-Kba" userLabel="Screen Stack">
+                                <rect key="frame" x="16" y="118" width="382" height="308"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YOj-AB-FC4">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="60.5"/>
@@ -348,7 +348,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dci-qP-LBe">
-                                        <rect key="frame" x="0.0" y="195" width="382" height="31"/>
+                                        <rect key="frame" x="0.0" y="195" width="382" height="113"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRn-Oa-zrj">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="31"/>
@@ -365,6 +365,36 @@
                                                     </switch>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCd-5L-6zC">
+                                                <rect key="frame" x="0.0" y="41" width="382" height="32"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdJ-me-bXp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="QkJ-9E-NxS">
+                                                        <rect key="frame" x="288" y="0.0" width="94" height="32"/>
+                                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                                    </stepper>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Iqg-dr-PYl">
+                                                <rect key="frame" x="0.0" y="83" width="382" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value: 0.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQN-Su-9RT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="191" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3EG-jU-jh7">
+                                                        <rect key="frame" x="189" y="0.0" width="195" height="31"/>
+                                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -373,21 +403,25 @@
                         <viewLayoutGuide key="safeArea" id="IQy-EP-0OW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IQy-EP-0OW" firstAttribute="trailing" secondItem="hJD-0r-Kba" secondAttribute="trailing" constant="16" id="TlU-yV-wOG"/>
-                            <constraint firstItem="hJD-0r-Kba" firstAttribute="leading" secondItem="IQy-EP-0OW" secondAttribute="leading" constant="16" id="eGc-yJ-7zY"/>
-                            <constraint firstItem="hJD-0r-Kba" firstAttribute="top" secondItem="IQy-EP-0OW" secondAttribute="top" constant="16" id="wYo-SB-yXP"/>
+                            <constraint firstItem="hJD-0r-Kba" firstAttribute="leading" secondItem="IQy-EP-0OW" secondAttribute="leading" constant="16" id="4L5-Ar-gcO"/>
+                            <constraint firstItem="hJD-0r-Kba" firstAttribute="top" secondItem="IQy-EP-0OW" secondAttribute="top" constant="30" id="Y3q-lj-MRN"/>
+                            <constraint firstItem="IQy-EP-0OW" firstAttribute="trailing" secondItem="hJD-0r-Kba" secondAttribute="trailing" constant="16" id="psf-lz-PJA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Qld-O3-Tkb"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="4wY-Fd-cXz" id="jH6-w1-IAT"/>
                         <outlet property="gameLabel" destination="Ai6-0m-Vga" id="uKf-Uy-mZO"/>
+                        <outlet property="slider" destination="3EG-jU-jh7" id="Dmp-Jr-GN9"/>
+                        <outlet property="sliderLabel" destination="TQN-Su-9RT" id="jGR-SW-W6H"/>
+                        <outlet property="stepper" destination="QkJ-9E-NxS" id="OkS-Ev-uQs"/>
+                        <outlet property="stepperLabel" destination="EdJ-me-bXp" id="Jav-0g-Gmg"/>
                         <outlet property="titleLabel" destination="EId-hl-lgX" id="VDM-rH-M2s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dD-bI-TUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2757" y="102"/>
+            <point key="canvasLocation" x="2756.521739130435" y="101.78571428571428"/>
         </scene>
         <!--User ProfileVC-->
         <scene sceneID="OuN-xb-xmO">
