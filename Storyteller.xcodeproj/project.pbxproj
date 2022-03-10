@@ -28,7 +28,6 @@
 		F4CE1FDD27D788BD00B330E7 /* RandomStuffGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDC27D788BD00B330E7 /* RandomStuffGenerator.swift */; };
 		F4CE1FE027D791BB00B330E7 /* StoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDF27D791BB00B330E7 /* StoryDetailVC.swift */; };
 		F4CE1FE227D7B51600B330E7 /* StoryMainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FE127D7B51600B330E7 /* StoryMainVM.swift */; };
-		F4CE1FE527D7B5A100B330E7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F4CE1FE427D7B5A100B330E7 /* FirebaseFirestore */; };
 		F4CE1FED27D9060200B330E7 /* StoryDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FEC27D9060200B330E7 /* StoryDetailVM.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +82,6 @@
 			files = (
 				F47EF13227D2519A00132867 /* FirebaseAnalytics in Frameworks */,
 				F47EF13427D2519A00132867 /* FirebaseAuth in Frameworks */,
-				F4CE1FE527D7B5A100B330E7 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +223,6 @@
 			packageProductDependencies = (
 				F47EF13127D2519A00132867 /* FirebaseAnalytics */,
 				F47EF13327D2519A00132867 /* FirebaseAuth */,
-				F4CE1FE427D7B5A100B330E7 /* FirebaseFirestore */,
 			);
 			productName = Storyteller;
 			productReference = F47EF0FB27D2505E00132867 /* Storyteller.app */;
@@ -724,11 +721,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F47EF13027D2519A00132867 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
-		};
-		F4CE1FE427D7B5A100B330E7 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F47EF13027D2519A00132867 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

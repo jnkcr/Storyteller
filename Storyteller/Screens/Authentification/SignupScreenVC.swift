@@ -7,7 +7,6 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseFirestore
 
 class SignupScreenVC: UIViewController {
     
