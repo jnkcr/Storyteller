@@ -11,14 +11,5 @@ import FirebaseAuth
 class StoryMainVM {
     
     var authUser: User?
-    var userData: [String: Any]?
-    
-    init() {
-        
-    }
-    
-    func startListeningForDatabase() {
-        
-    }
     
 }

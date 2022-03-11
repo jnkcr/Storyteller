@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F410AF7627DB4FAE00157512 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F410AF7527DB4FAE00157512 /* Auth.storyboard */; };
 		F43A200327D50BA10050066A /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A200227D50BA10050066A /* UserProfileVC.swift */; };
 		F440F1B327D61EDD00A5080F /* ForgottenPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B227D61EDD00A5080F /* ForgottenPasswordVC.swift */; };
 		F47EF0FF27D2505E00132867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF0FE27D2505E00132867 /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F410AF7527DB4FAE00157512 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		F43A200227D50BA10050066A /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		F440F1B227D61EDD00A5080F /* ForgottenPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordVC.swift; sourceTree = "<group>"; };
 		F47EF0FB27D2505E00132867 /* Storyteller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storyteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F410AF7427DB4F9B00157512 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F47EF10427D2505E00132867 /* Main.storyboard */,
+				F410AF7527DB4FAE00157512 /* Auth.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		F43A200427D50BB20050066A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +155,7 @@
 				F47EF10027D2505E00132867 /* SceneDelegate.swift */,
 				F43A200427D50BB20050066A /* Screens */,
 				F4CE1FEB27D8EAB700B330E7 /* Helpers */,
-				F47EF10427D2505E00132867 /* Main.storyboard */,
+				F410AF7427DB4F9B00157512 /* Storyboards */,
 				F47EF10727D2505F00132867 /* Assets.xcassets */,
 				F47EF10927D2505F00132867 /* LaunchScreen.storyboard */,
 				F47EF10C27D2505F00132867 /* Info.plist */,
@@ -317,6 +328,7 @@
 			files = (
 				F47EF10B27D2505F00132867 /* LaunchScreen.storyboard in Resources */,
 				F47EF12F27D2509B00132867 /* GoogleService-Info.plist in Resources */,
+				F410AF7627DB4FAE00157512 /* Auth.storyboard in Resources */,
 				F47EF10827D2505F00132867 /* Assets.xcassets in Resources */,
 				F47EF10627D2505E00132867 /* Main.storyboard in Resources */,
 			);
