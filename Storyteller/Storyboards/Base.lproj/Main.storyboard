@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8iI-SO-vUW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8iI-SO-vUW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -86,10 +86,10 @@
                                 <segue destination="gdZ-eT-IOu" kind="show" identifier="toProfileScreen" id="h6k-ur-DtW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="doc.text.below.ecg.fill" catalog="system" id="Lr1-IU-3SV">
+                        <barButtonItem key="rightBarButtonItem" image="gamecontroller.fill" catalog="system" id="Lr1-IU-3SV">
                             <color key="tintColor" systemColor="systemIndigoColor"/>
                             <connections>
-                                <segue destination="AKT-n4-AkZ" kind="show" identifier="toWelcomeScreen" id="wb2-KN-v4X"/>
+                                <action selector="navigationButtonAction:" destination="oI1-Uc-h0j" id="gLR-gw-v4b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -97,6 +97,7 @@
                     <connections>
                         <outlet property="tableView" destination="iuW-mR-HdI" id="VJG-O2-HBf"/>
                         <segue destination="u9c-tp-LaJ" kind="show" identifier="toStoryDetail" id="9Zc-J3-0yW"/>
+                        <segue destination="AKT-n4-AkZ" kind="show" identifier="toWelcomeScreen" id="aHG-FO-Ofk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnS-1F-Xbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -112,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="hJD-0r-Kba" userLabel="Screen Stack">
-                                <rect key="frame" x="16" y="118" width="382" height="308"/>
+                                <rect key="frame" x="16" y="118" width="382" height="318"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YOj-AB-FC4">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="60.5"/>
@@ -148,8 +149,8 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dci-qP-LBe">
-                                        <rect key="frame" x="0.0" y="195" width="382" height="113"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dci-qP-LBe">
+                                        <rect key="frame" x="0.0" y="195" width="382" height="123"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRn-Oa-zrj">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="31"/>
@@ -167,7 +168,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCd-5L-6zC">
-                                                <rect key="frame" x="0.0" y="41" width="382" height="32"/>
+                                                <rect key="frame" x="0.0" y="46" width="382" height="32"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdJ-me-bXp">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="32"/>
@@ -182,7 +183,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Iqg-dr-PYl">
-                                                <rect key="frame" x="0.0" y="83" width="382" height="30"/>
+                                                <rect key="frame" x="0.0" y="93" width="382" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value: 0.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQN-Su-9RT">
                                                         <rect key="frame" x="0.0" y="0.0" width="191" height="30"/>
@@ -380,7 +381,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="doc.text.below.ecg.fill" catalog="system" width="115" height="128"/>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="80"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="secondaryLabelColor">

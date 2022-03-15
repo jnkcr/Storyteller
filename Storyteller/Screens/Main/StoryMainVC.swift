@@ -48,6 +48,10 @@ class StoryMainVC: UIViewController {
         }
     }
     
+    @IBAction func navigationButtonAction(_ sender: Any) {
+        navigationController?.pushViewController(GamesVC(), animated: true)
+    }
+    
 }
 
 // MARK: - Additional functionality

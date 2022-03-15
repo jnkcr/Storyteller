@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F410AF7627DB4FAE00157512 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F410AF7527DB4FAE00157512 /* Auth.storyboard */; };
+		F410AF7A27DB838F00157512 /* GamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410AF7927DB838F00157512 /* GamesVC.swift */; };
 		F43A200327D50BA10050066A /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A200227D50BA10050066A /* UserProfileVC.swift */; };
 		F440F1B327D61EDD00A5080F /* ForgottenPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B227D61EDD00A5080F /* ForgottenPasswordVC.swift */; };
+		F459CF8D27E0CC6600E65EA1 /* GamesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F459CF8C27E0CC6600E65EA1 /* GamesDetailVC.swift */; };
+		F459CF8F27E0CF7100E65EA1 /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F459CF8E27E0CF7100E65EA1 /* Games.storyboard */; };
 		F47EF0FF27D2505E00132867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF0FE27D2505E00132867 /* AppDelegate.swift */; };
 		F47EF10127D2505E00132867 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF10027D2505E00132867 /* SceneDelegate.swift */; };
 		F47EF10627D2505E00132867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47EF10427D2505E00132867 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 		F47EF13827D275CA00132867 /* LoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13727D275CA00132867 /* LoginScreenVC.swift */; };
 		F47EF13A27D276CC00132867 /* SignupScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13927D276CC00132867 /* SignupScreenVC.swift */; };
 		F47EF13D27D2C7BB00132867 /* StoryMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47EF13C27D2C7BB00132867 /* StoryMainVC.swift */; };
+		F499780227DF8288009C8EE0 /* GamesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F499780127DF8288009C8EE0 /* GamesCell.xib */; };
+		F499780427DF8493009C8EE0 /* GamesCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F499780327DF8493009C8EE0 /* GamesCellVC.swift */; };
+		F499780627DFB345009C8EE0 /* GamesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F499780527DFB345009C8EE0 /* GamesVM.swift */; };
 		F4CE1FDB27D7716A00B330E7 /* StoryMainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDA27D7716A00B330E7 /* StoryMainTableCell.swift */; };
 		F4CE1FDD27D788BD00B330E7 /* RandomStuffGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDC27D788BD00B330E7 /* RandomStuffGenerator.swift */; };
 		F4CE1FE027D791BB00B330E7 /* StoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE1FDF27D791BB00B330E7 /* StoryDetailVC.swift */; };
@@ -51,8 +57,11 @@
 
 /* Begin PBXFileReference section */
 		F410AF7527DB4FAE00157512 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		F410AF7927DB838F00157512 /* GamesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesVC.swift; sourceTree = "<group>"; };
 		F43A200227D50BA10050066A /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		F440F1B227D61EDD00A5080F /* ForgottenPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordVC.swift; sourceTree = "<group>"; };
+		F459CF8C27E0CC6600E65EA1 /* GamesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesDetailVC.swift; sourceTree = "<group>"; };
+		F459CF8E27E0CF7100E65EA1 /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
 		F47EF0FB27D2505E00132867 /* Storyteller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storyteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47EF0FE27D2505E00132867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47EF10027D2505E00132867 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +79,9 @@
 		F47EF13727D275CA00132867 /* LoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenVC.swift; sourceTree = "<group>"; };
 		F47EF13927D276CC00132867 /* SignupScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreenVC.swift; sourceTree = "<group>"; };
 		F47EF13C27D2C7BB00132867 /* StoryMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMainVC.swift; sourceTree = "<group>"; };
+		F499780127DF8288009C8EE0 /* GamesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesCell.xib; sourceTree = "<group>"; };
+		F499780327DF8493009C8EE0 /* GamesCellVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCellVC.swift; sourceTree = "<group>"; };
+		F499780527DFB345009C8EE0 /* GamesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesVM.swift; sourceTree = "<group>"; };
 		F4CE1FDA27D7716A00B330E7 /* StoryMainTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMainTableCell.swift; sourceTree = "<group>"; };
 		F4CE1FDC27D788BD00B330E7 /* RandomStuffGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStuffGenerator.swift; sourceTree = "<group>"; };
 		F4CE1FDF27D791BB00B330E7 /* StoryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailVC.swift; sourceTree = "<group>"; };
@@ -109,20 +121,38 @@
 			children = (
 				F47EF10427D2505E00132867 /* Main.storyboard */,
 				F410AF7527DB4FAE00157512 /* Auth.storyboard */,
+				F459CF8E27E0CF7100E65EA1 /* Games.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		F43A200427D50BB20050066A /* Screens */ = {
+		F410AF7727DB833500157512 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				F47EF13C27D2C7BB00132867 /* StoryMainVC.swift */,
 				F4CE1FDA27D7716A00B330E7 /* StoryMainTableCell.swift */,
 				F4CE1FE127D7B51600B330E7 /* StoryMainVM.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F410AF7827DB834100157512 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
 				F4CE1FDF27D791BB00B330E7 /* StoryDetailVC.swift */,
 				F4CE1FEC27D9060200B330E7 /* StoryDetailVM.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F43A200427D50BB20050066A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F410AF7727DB833500157512 /* Main */,
+				F410AF7827DB834100157512 /* Detail */,
 				F4CE1FDE27D7919400B330E7 /* Profile */,
 				F47EF13B27D2C77B00132867 /* Authentification */,
+				F499780027DB92C6009C8EE0 /* Games */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -190,6 +220,18 @@
 				F47EF13927D276CC00132867 /* SignupScreenVC.swift */,
 			);
 			path = Authentification;
+			sourceTree = "<group>";
+		};
+		F499780027DB92C6009C8EE0 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				F410AF7927DB838F00157512 /* GamesVC.swift */,
+				F499780527DFB345009C8EE0 /* GamesVM.swift */,
+				F499780327DF8493009C8EE0 /* GamesCellVC.swift */,
+				F499780127DF8288009C8EE0 /* GamesCell.xib */,
+				F459CF8C27E0CC6600E65EA1 /* GamesDetailVC.swift */,
+			);
+			path = Games;
 			sourceTree = "<group>";
 		};
 		F4CE1FDE27D7919400B330E7 /* Profile */ = {
@@ -329,8 +371,10 @@
 				F47EF10B27D2505F00132867 /* LaunchScreen.storyboard in Resources */,
 				F47EF12F27D2509B00132867 /* GoogleService-Info.plist in Resources */,
 				F410AF7627DB4FAE00157512 /* Auth.storyboard in Resources */,
+				F459CF8F27E0CF7100E65EA1 /* Games.storyboard in Resources */,
 				F47EF10827D2505F00132867 /* Assets.xcassets in Resources */,
 				F47EF10627D2505E00132867 /* Main.storyboard in Resources */,
+				F499780227DF8288009C8EE0 /* GamesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,16 +401,20 @@
 			files = (
 				F440F1B327D61EDD00A5080F /* ForgottenPasswordVC.swift in Sources */,
 				F47EF13827D275CA00132867 /* LoginScreenVC.swift in Sources */,
+				F459CF8D27E0CC6600E65EA1 /* GamesDetailVC.swift in Sources */,
 				F4CE1FDB27D7716A00B330E7 /* StoryMainTableCell.swift in Sources */,
 				F47EF13627D2753600132867 /* WelcomeScreenVC.swift in Sources */,
 				F4CE1FE027D791BB00B330E7 /* StoryDetailVC.swift in Sources */,
 				F4CE1FE227D7B51600B330E7 /* StoryMainVM.swift in Sources */,
+				F499780427DF8493009C8EE0 /* GamesCellVC.swift in Sources */,
 				F43A200327D50BA10050066A /* UserProfileVC.swift in Sources */,
+				F499780627DFB345009C8EE0 /* GamesVM.swift in Sources */,
 				F4CE1FDD27D788BD00B330E7 /* RandomStuffGenerator.swift in Sources */,
 				F47EF0FF27D2505E00132867 /* AppDelegate.swift in Sources */,
 				F4CE1FED27D9060200B330E7 /* StoryDetailVM.swift in Sources */,
 				F47EF13D27D2C7BB00132867 /* StoryMainVC.swift in Sources */,
 				F47EF13A27D276CC00132867 /* SignupScreenVC.swift in Sources */,
+				F410AF7A27DB838F00157512 /* GamesVC.swift in Sources */,
 				F47EF10127D2505E00132867 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
