@@ -13,13 +13,15 @@ class GamesDetailVC: UIViewController {
     
     @IBOutlet weak var gameIcon: UIImageView!
     @IBOutlet weak var gameTitle: UILabel!
+    @IBOutlet weak var gameYear: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Detail"
+        title = "Game detail"
         // Fill in UI
         gameIcon.image = UIImage(named: game?.imageName ?? "dpad.fill")
         gameTitle.text = game?.name
+        gameYear.text = String(game?.year ?? 0000)
     }
     
 }
